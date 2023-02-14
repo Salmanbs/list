@@ -1,12 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>List</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
+
 <body>
-  
+  ​
+  ​<section id = "form">
+  <form id="filter-form">
+    <label for="filter-rating">Filter by rating:</label>
+    <select id="filter-rating">
+      <option value="">All</option>
+      <option value="5">5</option>
+      <option value="4">4</option>
+      <option value="3">3</option>
+      <option value="2">2</option>
+      <option value="1">1</option>
+    </select>
+    <label for="filter-category">Filter by category:</label>
+    <select id="filter-category">
+      <option value="">All</option>
+    </select>
+    <button type="submit">Filter</button>
+  </form>
+
+  <form id="search-form">
+    <input type="text" id="search-input" placeholder="Search">
+    <button type="submit">Search</button>
+  </form>
+</section>
+
+<section id = "list">
+  <div id="product-list">
+    <template id="product-template">
+      <div class="product">
+        <img class="product-image" style="height: 100px; width: 100px; margin-right: 10px;" src="" alt="product image">
+        <div class="product-details">
+          <h2 class="product-title"></h2>
+          <div class="product-price"></div>
+          <div class="product-category"></div>
+          <div class="product-rating"></div>
+        </div>
+      </div>
+    </template>
+  </div>
+</section>
+
+  <script src="./script.js"></script>
 </body>
+
 </html>
